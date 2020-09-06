@@ -1,9 +1,3 @@
-/*
-*       LooourCore
-*
-*  @author Karim T.
-*
- */
 package me.karim.utilities.block;
 
 import org.bukkit.Location;
@@ -27,12 +21,12 @@ public class BlockUtil {
 
     public static Entity[] getNearbyEntities(Location l, int radius) {
         int chunkRadius = radius < 16 ? 1 : (radius - (radius % 16)) / 16;
-        HashSet<Entity> radiusEntities = new HashSet < Entity > ();
+        HashSet<Entity> radiusEntities = new HashSet<Entity>();
 
         for (int chX = 0 - chunkRadius; chX <= chunkRadius; chX++) {
             for (int chZ = 0 - chunkRadius; chZ <= chunkRadius; chZ++) {
                 int x = (int) l.getX(), y = (int) l.getY(), z = (int) l.getZ();
-                for (Entity e: new Location(l.getWorld(), x + (chX * 16), y, z + (chZ * 16)).getChunk().getEntities()) {
+                for (Entity e : new Location(l.getWorld(), x + (chX * 16), y, z + (chZ * 16)).getChunk().getEntities()) {
                     if (e.getLocation().distance(l) <= radius && e.getLocation().getBlock() != l.getBlock())
                         radiusEntities.add(e);
                 }
@@ -42,15 +36,12 @@ public class BlockUtil {
         return radiusEntities.toArray(new Entity[radiusEntities.size()]);
     }
 
-    public static boolean generatesCobble(int id, Block b)
-    {
+    public static boolean generatesCobble(int id, Block b) {
         int mirrorID1 = (id == 8 || id == 9 ? 10 : 8);
         int mirrorID2 = (id == 8 || id == 9 ? 11 : 9);
-        for(BlockFace face : BlockUtil.blockFaces)
-        {
+        for (BlockFace face : BlockUtil.blockFaces) {
             Block r = b.getRelative(face, 1);
-            if(r.getTypeId() == mirrorID1 || r.getTypeId() == mirrorID2)
-            {
+            if (r.getTypeId() == mirrorID1 || r.getTypeId() == mirrorID2) {
                 return true;
             }
         }

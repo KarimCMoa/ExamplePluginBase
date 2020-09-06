@@ -8,9 +8,17 @@ public class Style {
     private static final int MAX_LENGTH = 53;
     private static final FontRenderer FONT_RENDERER = new FontRenderer();
 
-    public static String FIRST_COLOR() { return CC.DARK_RED; }
-    public static String SECOND_COLOR() { return CC.RED; }
-    public static String THIRD_COLOR() { return CC.WHITE; }
+    public static String FIRST_COLOR() {
+        return CC.DARK_RED;
+    }
+
+    public static String SECOND_COLOR() {
+        return CC.RED;
+    }
+
+    public static String THIRD_COLOR() {
+        return CC.WHITE;
+    }
 
     public static String SERVER_NAME() {
         return "CoreExample";
