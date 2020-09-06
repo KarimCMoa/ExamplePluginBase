@@ -1,0 +1,6 @@
+Error Code:
+    Commands:
+        - #C-001 | The core is currently in setup mode > Wait a minute > Restart your server > Contact Karim#8672.
+        - #C-002 | The command isn't executable by the console > Execute the command by a player.
+        - #C-003 | The player doesn't have permission to do a command > Check the player rank > Check the rank permissions of the player>emove the player from the database.
+        - #C-003 | You have a problem with your command > Contact Karim#8672.

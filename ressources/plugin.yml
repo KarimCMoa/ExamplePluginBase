@@ -1,0 +1,7 @@
+name: CoreExample
+author: Karim
+version: 0.1
+main: me.karim.CoreExample
+description: Alcyon's Dev - https://discord.gg/yZqG96W
+commands:
+  help:

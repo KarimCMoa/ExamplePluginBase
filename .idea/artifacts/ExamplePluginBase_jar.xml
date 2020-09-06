@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="ExamplePluginBase:jar">
+    <output-path>D:/Windows/Desktop/Seventime Test Spigot/plugins</output-path>
+    <root id="archive" name="ExamplePluginBase.jar">
+      <element id="module-output" name="ExamplePluginBase" />
+    </root>
+  </artifact>
+</component>
